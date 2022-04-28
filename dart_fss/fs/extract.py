@@ -1231,7 +1231,7 @@ def analyze_report(report: Report,
                    separator: bool = True,
                    dataset: str = 'xbrl') -> Union[Dict[str, Optional[DataFrame]], None]:
     # 2012년 이후 데이터만 XBRL 데이터 추출
-    year = int(report.rcept_dt[:4])
+    year = int(report.rcept_no[:4])
     if year > 2011 and dataset == 'xbrl':
         xbrl = report.xbrl
     else:
